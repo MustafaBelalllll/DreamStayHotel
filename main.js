@@ -1,5 +1,6 @@
 const proxy = "https://localhost:7197"
 const getElement = (element) => document.querySelector(element)
+const getElements = (element) => document.querySelectorAll(element)
 async function handleLoginButton() {
     let formData = new FormData(getElement("#loginModal"))
     let { username, password } = Object.fromEntries(formData.entries());
@@ -12,6 +13,10 @@ async function handleLoginButton() {
         body: JSON.stringify({ userName: username, password })
     }).then(async(response) => await response.text()).then((data) => {
         window.localStorage.setItem("Token", data)
+        alert("Sikeres bejelentkezés.")
+        Array.from(getElements('#loginModal input')).map((element ) => {
+            element.value = ""
+        })
     })
 }
 async function handleRegisterButton() {
@@ -30,7 +35,11 @@ async function handleRegisterButton() {
         },
         body: JSON.stringify({ email, userName, password, fullName, phoneNumber, address, dateOfBirth })
     }).then(async(response) => await response.text()).then((data) => {
-        console.log(data);
+        alert("Sikeres Regisztráció.")
+        Array.from(getElements('#registerModal input')).map((element ) => {
+            element.value = ""
+        })
+
     })
 }
 
