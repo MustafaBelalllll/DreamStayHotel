@@ -30,10 +30,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link active me-2" aria-current="page" href="index.html">Kezdőlap</a></li>
-                    <li class="nav-item"><a class="nav-link me-2" href="#">Szobáink</a></li>
-                    <li class="nav-item"><a class="nav-link me-2" href="facilities.html">Szolgáltatásaink</a></li>
-                    <li class="nav-item"><a class="nav-link me-2" href="#">Lépj kapcsolatba velünk</a></li>
-                    <li class="nav-item"><a class="nav-link me-2" href="#">Rólunk</a></li>
+                    <li class="nav-item"><a class="nav-link me-2" href="#szobaink">Szobáink</a></li>
+                    <li class="nav-item"><a class="nav-link me-2" href="#szolgaltatasok">Szolgáltatásaink</a></li>
+                    <li class="nav-item"><a class="nav-link me-2" href="#contact-us">Lépj kapcsolatba velünk</a></li>
+                    <li class="nav-item"><a class="nav-link me-2" href="about.html">Rólunk</a></li>
                 </ul>
                 <div class="d-flex">
                     <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Bejelentkezés</button>
@@ -166,7 +166,7 @@
     <div class="container availability-form">
         <div class="row">
             <div class="col-lg-12 bg-white shadow p-4 rounded">
-                <h5 class="mb-4">Szabad időpontok ellenőrzése</h5>
+                <h5 class="mb-4">Szabad szobák ellenőrzése</h5>
                 <form>
                     <div class="row align-items-end">
                         <div class="col-lg-3 mb-3">
@@ -186,10 +186,6 @@
                                 <option value="3">3 felnőtt</option>
                                 <option value="3">4 felnőtt</option>
                                 <option value="3">5 felnőtt</option>
-                                <option value="3">6 felnőtt</option>
-                                <option value="3">7 felnőtt</option>
-                                <option value="3">8 felnőtt</option>
-                                <option value="3">9 felnőtt</option>
                             </select>
                         </div>
                         <div class="col-lg-2 mb-3">
@@ -201,14 +197,10 @@
                                 <option value="3">3 gyermek</option>
                                 <option value="1">4 gyermek</option>
                                 <option value="1">5 gyermek</option>
-                                <option value="1">6 gyermek</option>
-                                <option value="1">7 gyermek</option>
-                                <option value="1">8 gyermek</option>
-                                <option value="1">9 gyermek</option>
                             </select>
                         </div>
                         <div class="col-lg-1 mb-lg-3 mt-2">
-                            <button type="submit" class="btn text-white shadow-none custom-bg">Elküld</button>
+                            <button type="button" class="btn text-white shadow-none custom-bg" onclick="window.location.href='rooms.html'">Elküld</button>
                         </div>
                     </div>
                 </form>
@@ -217,6 +209,7 @@
     </div>
 
     <!-- Szobáink Section -->
+     <h2 id="szobaink">
     <h2 class="mt-5 pt-4 mb-4 text-center fw-bold">Szobáink</h2>
     <div class="h-line bg-dark"></div>
     <div class="container">
@@ -234,13 +227,6 @@
                                 Minimalista dekoráció, természetes anyagok (fa, fém) használata.
                             </span>
                         </div>
-                        <div class="facilities mb-4">
-                            <h6 class="mb-1">Felszereltség:</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">WiFi</span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">Televízió</span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">Légkondicionáló</span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">Padlófűtés</span>
-                        </div>
                         <div class="rating mb-4">
                             <h6 class="mb-1">Értékelés:</h6>
                             <span class="badge rounded-pill bg-light">
@@ -252,11 +238,50 @@
                         </div>
                         <div class="d-flex justify-content-evenly mb-2">
                             <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Foglalás</a>
-                            <a href="#" class="btn btn-sm btn-outline-dark shadow-none">További részletek</a>
+                            <!-- Modal gomb -->
+                            <button type="button" class="btn btn-sm btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#modalMinimal">
+                                További részletek
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal" id="modalMinimal">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                
+                                <!-- Modal Header -->
+                                <div class="modal-header text-dark fw-bold fs-3 h-font">
+                                    <h3 class="modal-title fw-bold fs-3 h-font">Modern Minimal szoba</h3>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body text-dark">
+                                    <img src="images/rooms/5.png" width="400px" alt="Modern Minimal Szoba" style="border-radius: 15px">
+                                    <br><br>
+                                    <h4 class="modal-text fw-bold">Felszereltség:</h4>
+                                    <table class="table table-hover">
+                                    <div class="facilities mb-4">
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">WiFi</span>
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">Televízió</span>
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">Légkondicionáló</span>
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">Padlófűtés</span>
+                                    </div>
+                                    </table>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
+                                </div>
+
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--PANORÁMA-->
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
                     <img src="images/rooms/6.png" class="card-img-top">
@@ -270,13 +295,6 @@
                                 Tömörfa vagy magas minőségű lakkozott fa, elegáns, világos árnyalatokban (például tölgy vagy bükkfa).
                             </span>
                         </div>
-                        <div class="facilities mb-4">
-                            <h6 class="mb-1">Felszereltség:</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">WiFi</span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">Televízió</span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">Légkondicionáló</span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">Padlófűtés</span>
-                        </div>
                         <div class="rating mb-4">
                             <h6 class="mb-1">Értékelés:</h6>
                             <span class="badge rounded-pill bg-light">
@@ -289,11 +307,50 @@
                         </div>
                         <div class="d-flex justify-content-evenly mb-2">
                             <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Foglalás</a>
-                            <a href="#" class="btn btn-sm btn-outline-dark shadow-none">További részletek</a>
+                            <!-- Modal gomb -->
+                            <button type="button" class="btn btn-sm btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#modalPanorama">
+                                További részletek
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal" id="modalPanorama">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                
+                                <!-- Modal Header -->
+                                <div class="modal-header text-dark fw-bold fs-3 h-font">
+                                    <h3 class="modal-title fw-bold fs-3 h-font">Panoráma Deluxe Szoba</h3>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body text-dark">
+                                    <img src="images/rooms/6.png" width="400px" alt="Panorama Deluxe Szoba" style="border-radius: 15px">
+                                    <br><br>
+                                    <h4 class="modal-text fw-bold">Felszereltség:</h4>
+                                    <table class="table table-hover">
+                                    <div class="facilities mb-4">
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">WiFi</span>
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">Televízió</span>
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">Légkondicionáló</span>
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">Padlófűtés</span>
+                                    </div>
+                                    </table>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
+                                </div>
+
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--VINTAGE -->
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
                     <img src="images/rooms/3.png" class="card-img-top">
@@ -308,13 +365,7 @@
                                 Fából készült, antikolt, sötétbarna vagy mahagóni árnyalatú faágykeret, klasszikus formákkal és finom díszítésekkel.
                             </span>
                         </div>
-                        <div class="facilities mb-4">
-                            <h6 class="mb-1">Felszereltség:</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">WiFi</span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">Televízió</span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">Légkondicionáló</span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">Padlófűtés</span>
-                        </div>
+                        
                         <div class="rating mb-4">
                             <h6 class="mb-1">Értékelés:</h6>
                             <span class="badge rounded-pill bg-light">
@@ -326,17 +377,58 @@
                         </div>
                         <div class="d-flex justify-content-evenly mb-2">
                             <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Foglalás</a>
-                            <a href="#" class="btn btn-sm btn-outline-dark shadow-none">További részletek</a>
+
+                            <!-- Modal gomb -->
+                            <button type="button" class="btn btn-sm btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#modalVintage">
+                                További részletek
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal" id="modalVintage">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                
+                                <!-- Modal Header -->
+                                <div class="modal-header text-dark fw-bold fs-3 h-font">
+                                    <h3 class="modal-title fw-bold fs-3 h-font">Vintage Komfort Szoba</h3>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body text-dark">
+                                    <img src="images/rooms/3.png" width="400px" alt="Vintage Komfort Szoba" style="border-radius: 15px">
+                                    <br><br>
+                                    <h4 class="modal-text fw-bold">Felszereltség:</h4>
+                                    <table class="table table-hover">
+                                    <div class="facilities mb-4">
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">WiFi</span>
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">Televízió</span>
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">Légkondicionáló</span>
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">Padlófűtés</span>
+                                    </div>
+                                    </table>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
+                                </div>
+
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </h2>
             </div>
             <div class="col-lg-12 text-center mt-5">
-                <a href="#" class="btn btn-sm btn-outline-dark shadow-none">További szobák ☰</a>
+                <a href="rooms.html" class="btn btn-sm btn-outline-dark shadow-none">További szobák ☰</a>
             </div>
         </div>
     </div>
         <!--Szolgáltatásaink -->
+    <h2 id="szolgaltatasok">
     <h2 class="mt-5 pt-4 mb-4 text-center fw-bold">Szolgáltatásaink</h2>
     <div class="h-line bg-dark"></div>
     <div class="container">
@@ -362,11 +454,13 @@
             <h5 class="mt-3">Légkondicionáló</h5>
         </div>
         <div class="col-lg-12 text-center mt-5">
-            <a href="#" class="btn btn-sm btn-outline-dark shadow-none">További szolgáltatásaink ☰</a>
+            <a href="facilities.html" class="btn btn-sm btn-outline-dark shadow-none">Egyéb szolgáltatásaink ☰</a>
         </div>
     </div>
 </div>
+</h2>
 <!-- Vélemények -->
+ <h2 id="velemenyek">
 <h2 class="mt-5 pt-4 mb-4 text-center fw-bold">Vélemények</h2>
 <div class="h-line bg-dark"></div>
 <div class="container mt-5">
@@ -393,6 +487,7 @@
                     <i class="bi bi-star-fill text-warning"></i>
                 </div>
             </div>
+     </h2>
 
             <!-- Vélemény 2 -->
             <div class="swiper-slide bg-white p-4">
@@ -455,7 +550,7 @@
 </div> <!-- container vége -->
 
 <!-- Lépj kapcsolatba velünk-->
-
+<h2 id="contact-us">
 <h2 class="mt-5 pt-4 mb-4 text-center fw-bold">Lépj kapcsolatba velünk</h2>
 <div class="h-line bg-dark"></div>
 <div class="container">
@@ -499,7 +594,8 @@
         </div>
     </div>
 </div>
-
+</h2>
+<!--Footer-->
     <div class="container-fluid bg-white mt-5">
         <div class="row">
             <div class="footer-line"></div>
@@ -512,11 +608,11 @@
             <div class="col-lg-4 p-4">
                 <h3 class="fw-bold mb-3 footer-font">Linkek</h5>
                 <a href="index.html" class="d-inline-block mb-2 text-dark text-decoration-none">Kezdőlap</a> <br>
-                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Szobáink</a> <br>
-                <a href="facilities.html" class="d-inline-block mb-2 text-dark text-decoration-none">Szolgáltatásaink</a> <br>
-                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Vélemények</a> <br>
-                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Kapcsolatba lépés velünk</a> <br>
-                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Rólunk</a> <br>
+                <a href="#szobaink" class="d-inline-block mb-2 text-dark text-decoration-none">Szobáink</a> <br>
+                <a href="index.html#szolgaltatasok" class="d-inline-block mb-2 text-dark text-decoration-none">Szolgáltatásaink</a> <br>
+                <a href="index.html#velemenyek" class="d-inline-block mb-2 text-dark text-decoration-none">Vélemények</a> <br>
+                <a href="index.html#contact-us" class="d-inline-block mb-2 text-dark text-decoration-none">Kapcsolatba lépés velünk</a> <br>
+                <a href="about.html" class="d-inline-block mb-2 text-dark text-decoration-none">Rólunk</a> <br>
             </div>
             <div class="col-lg-4 p-4">
                 <h3 class="fw-bold footer-font">Kövessen minket</h5>
@@ -592,5 +688,6 @@
       }
     });
     </script>
+    <script src="./scroll.js"></script>
 </body>
 </html>

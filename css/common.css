@@ -46,6 +46,14 @@ input::-webkit-inner-spin-button {
     height: 1.7px;
 }
 
+.modal-title {
+    font-family: "Poppins", sans-serif;
+}
+
+.modal-text  {
+    font-family: "Poppins", sans-serif;
+}
+
 
 .footer-line {
     width: 100%;
@@ -58,3 +66,6 @@ input::-webkit-inner-spin-button {
 .footer-font{
         font-family: 'Bebas Neue', sans-serif;
             }
+
+
+            
