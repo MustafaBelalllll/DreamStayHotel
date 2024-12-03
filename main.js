@@ -24,7 +24,7 @@ async function handleRegisterButton() {
     let { email, userName, password, verifyPassword, fullName, phoneNumber, address, dateOfBirth } = Object.fromEntries(formData.entries());
 
     if (password !== verifyPassword) {
-        alert("Nem egyezik a jelszo")
+        alert("Nem egyezik a jelszó")
         return
     }
 
