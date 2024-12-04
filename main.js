@@ -1,6 +1,9 @@
-const proxy = "https://localhost:7197"
+
 const getElement = (element) => document.querySelector(element)
 const getElements = (element) => document.querySelectorAll(element)
+
+const proxy = "https://localhost:7197"
+
 async function handleLoginButton() {
     let formData = new FormData(getElement("#loginModal"))
     let { username, password } = Object.fromEntries(formData.entries());

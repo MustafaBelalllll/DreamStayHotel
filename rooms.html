@@ -1,434 +1,738 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DreamStay Hotel - Kezdőlap</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/common.css">
-    
-   
-</head>
-<body class="bg-light">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+  </head>
+  <body class="bg-light">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.html">DreamStay Hotel</a>
-            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.html"
+          >DreamStay Hotel</a
+        >
+        <button
+          class="navbar-toggler shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active me-2"
+                aria-current="page"
+                href="index.html"
+                >Kezdőlap</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-2" href="index.html#szobaink">Szobáink</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-2" href="index.html#szolgaltatasok"
+                >Szolgáltatásaink</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-2" href="index.html#contact-us"
+                >Lépj kapcsolatba velünk</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-2" href="about.html">Rólunk</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <button
+              type="button"
+              class="btn btn-outline-dark shadow-none me-lg-3 me-2"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Bejelentkezés
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active me-2" aria-current="page" href="index.html">Kezdőlap</a></li>
-                    <li class="nav-item"><a class="nav-link me-2" href="index.html#szobaink">Szobáink</a></li>
-                    <li class="nav-item"><a class="nav-link me-2" href="index.html#szolgaltatasok">Szolgáltatásaink</a></li>  
-                    <li class="nav-item"><a class="nav-link me-2" href="index.html#contact-us">Lépj kapcsolatba velünk</a></li>
-                    <li class="nav-item"><a class="nav-link me-2" href="about.html">Rólunk</a></li>
-                </ul>
-                <div class="d-flex">
-                    <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Bejelentkezés</button>
-                    <button type="button" class="btn btn-outline-dark shadow-none me-lg-2 me-3" data-bs-toggle="modal" data-bs-target="#registerModal">Regisztráció</button>
-                </div>
-            </div>
+            <button
+              type="button"
+              class="btn btn-outline-dark shadow-none me-lg-2 me-3"
+              data-bs-toggle="modal"
+              data-bs-target="#registerModal"
+            >
+              Regisztráció
+            </button>
+          </div>
         </div>
+      </div>
     </nav>
     <!-- Login Modal -->
-    <form class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form>
-                    <div class="modal-header">
-                        <h5 class="modal-title d-flex align-items-center">
-                            <i class="bi bi-person-circle fs-3 me-2"></i> Felhasználói bejelentkezés
-                        </h5>
-                        <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label class="form-label">Felhasználónév:</label>
-                            <input name="username" type="text" class="form-control shadow-none">
-                            <div id="emailHelp" class="form-text">Hivatalos email címet adj meg!</div>
-                        </div>
-                        <div class="mb-4">
-                            <label class="form-label">Jelszó:</label>
-                            <input name="password" type="password" class="form-control shadow-none">
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-2">
-                            <button type="submit" class="btn btn-dark shadow-none">Belépés</button>
-                            <a href="javascript:void(0)" class="text-secondary text-decoration-none">Elfelejtetted a jelszavad?</a>
-                        </div>
-                    </div>  
-                </form>
+    <form
+      class="modal fade"
+      id="loginModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <h5 class="modal-title d-flex align-items-center">
+                <i class="bi bi-person-circle fs-3 me-2"></i> Felhasználói
+                bejelentkezés
+              </h5>
+              <button
+                type="reset"
+                class="btn-close shadow-none"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label class="form-label">Felhasználónév:</label>
+                <input
+                  name="username"
+                  type="text"
+                  class="form-control shadow-none"
+                />
+                <div id="emailHelp" class="form-text">
+                  Hivatalos email címet adj meg!
+                </div>
+              </div>
+              <div class="mb-4">
+                <label class="form-label">Jelszó:</label>
+                <input
+                  name="password"
+                  type="password"
+                  class="form-control shadow-none"
+                />
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-between mb-2"
+              >
+                <button type="submit" class="btn btn-dark shadow-none">
+                  Belépés
+                </button>
+                <a
+                  href="javascript:void(0)"
+                  class="text-secondary text-decoration-none"
+                  >Elfelejtetted a jelszavad?</a
+                >
+              </div>
+            </div>
+          </form>
         </div>
+      </div>
     </form>
 
     <!-- Register Modal -->
-    <form class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <form>
-                    <div class="modal-header">
-                        <h5 class="modal-title d-flex align-items-center">
-                            <i class="bi bi-person-fill-add fs-3 me-2"></i> Felhasználói regisztráció
-                        </h5>
-                        <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <span class="badge bg-light text-dark mb-3 text-wrap lh-base">
-                            Megjegyzés: Az adataidnak egyeznie kell a te ID-dal. A bejelentkezés során fontos lesz.
-                        </span>
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Név:</label>
-                                    <input name="fullName" type="text" class="form-control shadow-none">
-                                </div>
-
-                                <div class="col-md-6 p-0 mb-3">
-                                    <label class="form-label">Felhasználónév:</label>
-                                    <input name="userName" type="text" class="form-control shadow-none">
-                                </div>
-
-                                <div class="col-md-6 p-0 mb-3">
-                                    <label class="form-label">Email cím:</label>
-                                    <input name="email" type="email" class="form-control shadow-none">
-                                </div>
-                                <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Telefonszám:</label>
-                                    <input name="phoneNumber" type="number" class="form-control shadow-none">
-                                </div>
-                                <div class="col-md-6 p-0 mb-3">
-                                    <label class="form-label">Lakcím:</label>
-                                    <input name="address" type="text" class="form-control shadow-none">
-                                </div>
-                                <div class="col-md-6 p-0 mb-3">
-                                    <label class="form-label">Születési dátum:</label>
-                                    <input name="dateOfBirth" type="date" class="form-control shadow-none">
-                                </div>
-                                <div class="col-md-6 ps-0 mb-3">
-                                    <label class="form-label">Jelszó:</label>
-                                    <input name="password" type="password" class="form-control shadow-none">
-                                </div>
-                                <div class="col-md-6 p-0 mb-3">
-                                    <label class="form-label">Jelszó megerősítése:</label>
-                                    <input name="verifyPassword" type="password" class="form-control shadow-none">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center my-1">
-                            <button type="submit" class="btn btn-dark shadow-none">Regisztrálás</button>
-                        </div>
-                    </div>
-                </form>
+    <form
+      class="modal fade"
+      id="registerModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <h5 class="modal-title d-flex align-items-center">
+                <i class="bi bi-person-fill-add fs-3 me-2"></i> Felhasználói
+                regisztráció
+              </h5>
+              <button
+                type="reset"
+                class="btn-close shadow-none"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
+            <div class="modal-body">
+              <span class="badge bg-light text-dark mb-3 text-wrap lh-base">
+                Megjegyzés: Az adataidnak egyeznie kell a te ID-dal. A
+                bejelentkezés során fontos lesz.
+              </span>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-6 ps-0 mb-3">
+                    <label class="form-label">Név:</label>
+                    <input
+                      name="fullName"
+                      type="text"
+                      class="form-control shadow-none"
+                    />
+                  </div>
+
+                  <div class="col-md-6 p-0 mb-3">
+                    <label class="form-label">Felhasználónév:</label>
+                    <input
+                      name="userName"
+                      type="text"
+                      class="form-control shadow-none"
+                    />
+                  </div>
+
+                  <div class="col-md-6 p-0 mb-3">
+                    <label class="form-label">Email cím:</label>
+                    <input
+                      name="email"
+                      type="email"
+                      class="form-control shadow-none"
+                    />
+                  </div>
+                  <div class="col-md-6 ps-0 mb-3">
+                    <label class="form-label">Telefonszám:</label>
+                    <input
+                      name="phoneNumber"
+                      type="number"
+                      class="form-control shadow-none"
+                    />
+                  </div>
+                  <div class="col-md-6 p-0 mb-3">
+                    <label class="form-label">Lakcím:</label>
+                    <input
+                      name="address"
+                      type="text"
+                      class="form-control shadow-none"
+                    />
+                  </div>
+                  <div class="col-md-6 p-0 mb-3">
+                    <label class="form-label">Születési dátum:</label>
+                    <input
+                      name="dateOfBirth"
+                      type="date"
+                      class="form-control shadow-none"
+                    />
+                  </div>
+                  <div class="col-md-6 ps-0 mb-3">
+                    <label class="form-label">Jelszó:</label>
+                    <input
+                      name="password"
+                      type="password"
+                      class="form-control shadow-none"
+                    />
+                  </div>
+                  <div class="col-md-6 p-0 mb-3">
+                    <label class="form-label">Jelszó megerősítése:</label>
+                    <input
+                      name="verifyPassword"
+                      type="password"
+                      class="form-control shadow-none"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="text-center my-1">
+                <button type="submit" class="btn btn-dark shadow-none">
+                  Regisztrálás
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
+      </div>
     </form>
     <!-- Szobáink Section -->
     <h2 class="mt-5 pt-4 mb-4 text-center fw-bold">További szobáink</h2>
     <div class="h-line bg-dark"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 my-3">
-                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                    <img src="images/rooms/5.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Superior Nagyágyas Szoba</h5>
-                        <h6 class="mb-4">25 000 Ft/éjszaka</h6>
-                        <div class="features mb-4">
-                            <h6 class="mb-1">Jellemzők:</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                Modern berendezés, kényelmes egy kétszemélyes ágy, ideális pároknak vagy üzleti utazóknak.
-                                Tágas fürdőszoba, valamint kellemes világítás.
-                            </span>
-                        </div>
-                        <div class="rating mb-4">
-                            <h6 class="mb-1">Értékelés:</h6>
-                            <span class="badge rounded-pill bg-light">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </span>
-                        </div>
-                        <div class="d-flex justify-content-evenly mb-2">
-                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Foglalás</a>
-                            <!-- Szoba 1: Superior Nagyágyas Szoba -->
-<button type="button" class="btn btn-sm btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#modalSuperior">
-    További részletek
-</button>
+      <div id="row" class="row">
+        <div class="col-lg-4 col-md-6 my-3">
+          <div
+            class="card border-0 shadow"
+            style="max-width: 350px; margin: auto"
+          >
+            <img src="images/rooms/5.png" class="card-img-top" />
+            <div class="card-body">
+              <h5>Superior Nagyágyas Szoba</h5>
+              <h6 class="mb-4">25 000 Ft/éjszaka</h6>
+              <div class="features mb-4">
+                <h6 class="mb-1">Jellemzők:</h6>
+                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                  Modern berendezés, kényelmes egy kétszemélyes ágy, ideális
+                  pároknak vagy üzleti utazóknak. Tágas fürdőszoba, valamint
+                  kellemes világítás.
+                </span>
+              </div>
+              <div class="rating mb-4">
+                <h6 class="mb-1">Értékelés:</h6>
+                <span class="badge rounded-pill bg-light">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                </span>
+              </div>
+              <div class="d-flex justify-content-evenly mb-2">
+                <a href="#" class="btn btn-sm text-white custom-bg shadow-none"
+                  >Foglalás</a
+                >
+                <!-- Szoba 1: Superior Nagyágyas Szoba -->
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-dark shadow-none"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalSuperior"
+                >
+                  További részletek
+                </button>
 
-<!-- Modal: Superior Nagyágyas Szoba -->
-<div class="modal" id="modalSuperior">
-    <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header text-dark fw-bold fs-3 h-font">
-                <h3 class="modal-title fw-bold fs-3 h-font">Superior Nagyágyas Szoba</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <!-- Modal Body -->
-            <div class="modal-body text-dark">
-                <img src="images/rooms/5.png" width="400px" alt="Superior Nagyágyas Szoba" style="border-radius: 15px">
-                <br></br>
-                <h4 class="modal-text fw-bold">Felszereltség:</h4>
-                <table class="table table-hover">
-                    <div class="facilities mb-4">
-                        <span class="badge rounded-pill bg-light text-dark text-wrap">WiFi</span>
-                        <span class="badge rounded-pill bg-light text-dark text-wrap">Televízió</span>
-                        <span class="badge rounded-pill bg-light text-dark text-wrap">Légkondicionáló</span>
-                        <span class="badge rounded-pill bg-light text-dark text-wrap">Padlófűtés</span>
+                <!-- Modal: Superior Nagyágyas Szoba -->
+                <div class="modal" id="modalSuperior">
+                  <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header text-dark fw-bold fs-3 h-font">
+                        <h3 class="modal-title fw-bold fs-3 h-font">
+                          Superior Nagyágyas Szoba
+                        </h3>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                        ></button>
+                      </div>
+                      <!-- Modal Body -->
+                      <div class="modal-body text-dark">
+                        <img
+                          src="images/rooms/5.png"
+                          width="400px"
+                          alt="Superior Nagyágyas Szoba"
+                          style="border-radius: 15px"
+                        />
+                        <br />
+                        <h4 class="modal-text fw-bold">Felszereltség:</h4>
+                        <table class="table table-hover">
+                          <div class="facilities mb-4">
+                            <span
+                              class="badge rounded-pill bg-light text-dark text-wrap"
+                              >WiFi</span
+                            >
+                            <span
+                              class="badge rounded-pill bg-light text-dark text-wrap"
+                              >Televízió</span
+                            >
+                            <span
+                              class="badge rounded-pill bg-light text-dark text-wrap"
+                              >Légkondicionáló</span
+                            >
+                            <span
+                              class="badge rounded-pill bg-light text-dark text-wrap"
+                              >Padlófűtés</span
+                            >
+                          </div>
+                        </table>
+                      </div>
+                      <!-- Modal Footer -->
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-danger"
+                          data-bs-dismiss="modal"
+                        >
+                          Bezár
+                        </button>
+                      </div>
                     </div>
-                </table>
-            </div>
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-                        </div>
-                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-            <!--Luxus-->
-            <div class="col-lg-4 col-md-6 my-3">
-                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                    <img src="images/rooms/2.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Luxus Családi Szoba</h5>
-                        <h6 class="mb-4">45 000 Ft/éjszaka</h6>
-                        <div class="features mb-4">
-                            <h6 class="mb-1">Jellemzők:</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                Két különálló hálószoba és egy tágas nappali, ideális családok számára. Kényelmes ágyak és nagy fürdőszoba.
-                        Nagy ablakok, amelyek csodálatos kilátást biztosítanak a természetre.
-                            </span>
-                        </div>
-                        <div class="rating mb-4">
-                            <h6 class="mb-1">Értékelés:</h6>
-                            <span class="badge rounded-pill bg-light">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </span>
-                        </div>
-                        <div class="d-flex justify-content-evenly mb-2">
-                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Foglalás</a>
-                            <!-- Szoba 2: Luxus Családi Szoba -->
-<button type="button" class="btn btn-sm btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#modalLuxus">
-    További részletek
-</button>
-
-<!-- Modal: Luxus Családi Szoba -->
-<div class="modal" id="modalLuxus">
-    <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header text-dark fw-bold fs-3 h-font">
-                <h3 class="modal-title fw-bold fs-3 h-font">Luxus Családi Szoba</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <!-- Modal Body -->
-            <div class="modal-body text-dark">
-                <img src="images/rooms/2.png" width="400px" alt="Luxus Családi Szoba" style="border-radius: 15px">
-                <br></br>
-                <h4 class="modal-text fw-bold">Felszereltség:</h4>
-                <table class="table table-hover">
-                    <div class="facilities mb-4">
-                        <span class="badge rounded-pill bg-light text-dark text-wrap">WiFi</span>
-                        <span class="badge rounded-pill bg-light text-dark text-wrap">Televízió</span>
-                        <span class="badge rounded-pill bg-light text-dark text-wrap">Légkondicionáló</span>
-                        <span class="badge rounded-pill bg-light text-dark text-wrap">Padlófűtés</span>
-                    </div>
-                </table>
-            </div>
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
-            </div>
+          </div>
         </div>
-    </div>
-</div>
-                        </div>
+        <!--Luxus-->
+        <!-- <div class="col-lg-4 col-md-6 my-3">
+          <div
+            class="card border-0 shadow"
+            style="max-width: 350px; margin: auto"
+          >
+            <img src="images/rooms/2.png" class="card-img-top" />
+            <div class="card-body">
+              <h5>Luxus Családi Szoba</h5>
+              <h6 class="mb-4">45 000 Ft/éjszaka</h6>
+              <div class="features mb-4">
+                <h6 class="mb-1">Jellemzők:</h6>
+                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                  Két különálló hálószoba és egy tágas nappali, ideális családok
+                  számára. Kényelmes ágyak és nagy fürdőszoba. Nagy ablakok,
+                  amelyek csodálatos kilátást biztosítanak a természetre.
+                </span>
+              </div>
+              <div class="rating mb-4">
+                <h6 class="mb-1">Értékelés:</h6>
+                <span class="badge rounded-pill bg-light">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                </span>
+              </div>
+              <div class="d-flex justify-content-evenly mb-2">
+                <a href="#" class="btn btn-sm text-white custom-bg shadow-none"
+                  >Foglalás</a
+                >
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-dark shadow-none"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalLuxus"
+                >
+                  További részletek
+                </button>
+
+                <div class="modal" id="modalLuxus">
+                  <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                      <div class="modal-header text-dark fw-bold fs-3 h-font">
+                        <h3 class="modal-title fw-bold fs-3 h-font">
+                          Luxus Családi Szoba
+                        </h3>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                        ></button>
+                      </div>
+                      <div class="modal-body text-dark">
+                        <img
+                          src="images/rooms/2.png"
+                          width="400px"
+                          alt="Luxus Családi Szoba"
+                          style="border-radius: 15px"
+                        />
+                        <br />
+                        <h4 class="modal-text fw-bold">Felszereltség:</h4>
+                        <table class="table table-hover">
+                          <div class="facilities mb-4">
+                            <span
+                              class="badge rounded-pill bg-light text-dark text-wrap"
+                              >WiFi</span
+                            >
+                            <span
+                              class="badge rounded-pill bg-light text-dark text-wrap"
+                              >Televízió</span
+                            >
+                            <span
+                              class="badge rounded-pill bg-light text-dark text-wrap"
+                              >Légkondicionáló</span
+                            >
+                            <span
+                              class="badge rounded-pill bg-light text-dark text-wrap"
+                              >Padlófűtés</span
+                            >
+                          </div>
+                        </table>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-danger"
+                          data-bs-dismiss="modal"
+                        >
+                          Bezár
+                        </button>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-            <!--Executive -->
-            <div class="col-lg-4 col-md-6 my-3">
-                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                    <img src="images/rooms/4.png" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Executive Suite szoba</h5>
-                        <h6 class="mb-4">20  000 Ft/éjszaka</h6>
-                        <div class="features mb-4">
-                            <h6 class="mb-1">Jellemzők:</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                Belső udvarra néző, csendes és nyugodt.
-                                Exkluzív szoba magas szintű kényelemmel, saját erkély, fürdőkáddal rendelkező fürdőszoba.
-                                A szoba luxus berendezéssel is rendelkezik.
-                            </span>
-                        </div>
-                        
-                        <div class="rating mb-4">
-                            <h6 class="mb-1">Értékelés:</h6>
-                            <span class="badge rounded-pill bg-light">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </span>
-                        </div>
-                        <div class="d-flex justify-content-evenly mb-2">
-                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Foglalás</a>
+          </div>
+        </div> -->
+        <!--Executive -->
+        <!-- <div class="col-lg-4 col-md-6 my-3">
+          <div
+            class="card border-0 shadow"
+            style="max-width: 350px; margin: auto"
+          >
+            <img src="images/rooms/4.png" class="card-img-top" />
+            <div class="card-body">
+              <h5>Executive Suite szoba</h5>
+              <h6 class="mb-4">20 000 Ft/éjszaka</h6>
+              <div class="features mb-4">
+                <h6 class="mb-1">Jellemzők:</h6>
+                <span class="badge rounded-pill bg-light text-dark text-wrap">
+                  Belső udvarra néző, csendes és nyugodt. Exkluzív szoba magas
+                  szintű kényelemmel, saját erkély, fürdőkáddal rendelkező
+                  fürdőszoba. A szoba luxus berendezéssel is rendelkezik.
+                </span>
+              </div>
 
-                            <!-- Szoba 3: Executive Suite Szoba -->
-<button type="button" class="btn btn-sm btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#modalExecutive">
-    További részletek
-</button>
+              <div class="rating mb-4">
+                <h6 class="mb-1">Értékelés:</h6>
+                <span class="badge rounded-pill bg-light">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <i class="bi bi-star-fill text-warning"></i>
+                </span>
+              </div>
+              <div class="d-flex justify-content-evenly mb-2">
+                <a href="#" class="btn btn-sm text-white custom-bg shadow-none"
+                  >Foglalás</a
+                >
 
-<!-- Modal: Executive Suite Szoba -->
-<div class="modal" id="modalExecutive">
-    <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header text-dark fw-bold fs-3 h-font">
-                <h3 class="modal-title fw-bold fs-3 h-font">Executive Suite Szoba</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <!-- Modal Body -->
-            <div class="modal-body text-dark">
-                <img src="images/rooms/4.png" width="400px" alt="Executive Suite Szoba" style="border-radius: 15px">
-                <br></br>
-                <h4 class="modal-text fw-bold">Felszereltség:</h4>
-                <table class="table table-hover">
-                    <div class="facilities mb-4">
-                        <span class="badge rounded-pill bg-light text-dark text-wrap">WiFi</span>
-                        <span class="badge rounded-pill bg-light text-dark text-wrap">Televízió</span>
-                        <span class="badge rounded-pill bg-light text-dark text-wrap">Légkondicionáló</span>
-                        <span class="badge rounded-pill bg-light text-dark text-wrap">Padlófűtés</span>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-dark shadow-none"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalExecutive"
+                >
+                  További részletek
+                </button>
+
+                <div class="modal" id="modalExecutive">
+                  <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                      <div class="modal-header text-dark fw-bold fs-3 h-font">
+                        <h3 class="modal-title fw-bold fs-3 h-font">
+                          Executive Suite Szoba
+                        </h3>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                        ></button>
+                      </div>
+                      <div class="modal-body text-dark">
+                        <img
+                          src="images/rooms/4.png"
+                          width="400px"
+                          alt="Executive Suite Szoba"
+                          style="border-radius: 15px"
+                        />
+                        <br />
+                        <h4 class="modal-text fw-bold">Felszereltség:</h4>
+                        <table class="table table-hover">
+                          <div class="facilities mb-4">
+                            <span
+                              class="badge rounded-pill bg-light text-dark text-wrap"
+                              >WiFi</span
+                            >
+                            <span
+                              class="badge rounded-pill bg-light text-dark text-wrap"
+                              >Televízió</span
+                            >
+                            <span
+                              class="badge rounded-pill bg-light text-dark text-wrap"
+                              >Légkondicionáló</span
+                            >
+                            <span
+                              class="badge rounded-pill bg-light text-dark text-wrap"
+                              >Padlófűtés</span
+                            >
+                          </div>
+                        </table>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-danger"
+                          data-bs-dismiss="modal"
+                        >
+                          Bezár
+                        </button>
+                      </div>
                     </div>
-                </table>
-            </div>
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bezár</button>
-            </div>
-        </div>
-    </div>
-</div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
+          </div>
+        </div> -->
+      </div>
     </div>
-       <!--Footer-->
+    <!--Footer-->
     <div class="container-fluid bg-white mt-5">
-        <div class="row">
-            <div class="footer-line"></div>
-            <div class="col-lg-4 p-4">
-                <h3 class="fw-bold fs-3 footer-font">DreamStay Hotel</h3>
-                 <p>
-                    Hotel, ahol a luxus és a kényelem találkozik. Vendégeink számára a tökéletes kikapcsolódást kínáljuk, legyen szó pihenésről, üzleti útról vagy különleges alkalmakról. Elegánsan berendezett szobáink, prémium szolgáltatásaink és figyelmes személyzetünk garantálja, hogy minden pillanat emlékezetessé váljon.
-                 </p>
-            </div>
-            <div class="col-lg-4 p-4">
-                <h3 class="fw-bold mb-3 footer-font">Linkek</h5>
-                <a href="index.html" class="d-inline-block mb-2 text-dark text-decoration-none">Kezdőlap</a> <br>
-                <a href="index.html#szobaink" class="d-inline-block mb-2 text-dark text-decoration-none">Szobáink</a> <br>
-                <a href="index.html#szolgaltatasok" class="d-inline-block mb-2 text-dark text-decoration-none">Szolgáltatásaink</a> <br>
-                <a href="index.html#velemenyek" class="d-inline-block mb-2 text-dark text-decoration-none">Vélemények</a> <br>
-                <a href="index.html#contact-us" class="d-inline-block mb-2 text-dark text-decoration-none">Kapcsolatba lépés velünk</a> <br>
-                <a href="about.html" class="d-inline-block mb-2 text-dark text-decoration-none">Rólunk</a> <br>
-            </div>
-            <div class="col-lg-4 p-4">
-                <h3 class="fw-bold footer-font">Kövessen minket</h5>
-                <a href="https://www.instagram.com/dreamstayhotel_/" target="_blank" class="d-inline-block mb-3">
-                    <span class="badge bg-light text-dark fs-6 p-2"> 
-                        <i class="bi bi-instagram me-1"></i>Instagram
-                    </span>
-                </a>
-                <br>
-                <a href="https://www.facebook.com/profile.php?id=61568641694075" target="_blank" class="d-inline-block mb-3">
-                    <span class="badge bg-light text-dark fs-6 p-2"> 
-                        <i class="bi bi-facebook me-1"></i>Facebook
-                    </span>
-                </a>
-                <br>
-                <a href="https://www.tiktok.com/@dreamstay.hotel" target="_blank" class="d-inline-block">
-                    <span class="badge bg-light text-dark fs-6 p-2"> 
-                        <i class="bi bi-tiktok me-1"></i>TikTok
-                    </span>
-                </a>
-            </div>
+      <div class="row">
+        <div class="footer-line"></div>
+        <div class="col-lg-4 p-4">
+          <h3 class="fw-bold fs-3 footer-font">DreamStay Hotel</h3>
+          <p>
+            Hotel, ahol a luxus és a kényelem találkozik. Vendégeink számára a
+            tökéletes kikapcsolódást kínáljuk, legyen szó pihenésről, üzleti
+            útról vagy különleges alkalmakról. Elegánsan berendezett szobáink,
+            prémium szolgáltatásaink és figyelmes személyzetünk garantálja, hogy
+            minden pillanat emlékezetessé váljon.
+          </p>
         </div>
+        <div class="col-lg-4 p-4">
+          <h3 class="fw-bold mb-3 footer-font">Linkek</h3>
+          <a
+            href="index.html"
+            class="d-inline-block mb-2 text-dark text-decoration-none"
+            >Kezdőlap</a
+          >
+          <br />
+          <a
+            href="index.html#szobaink"
+            class="d-inline-block mb-2 text-dark text-decoration-none"
+            >Szobáink</a
+          >
+          <br />
+          <a
+            href="index.html#szolgaltatasok"
+            class="d-inline-block mb-2 text-dark text-decoration-none"
+            >Szolgáltatásaink</a
+          >
+          <br />
+          <a
+            href="index.html#velemenyek"
+            class="d-inline-block mb-2 text-dark text-decoration-none"
+            >Vélemények</a
+          >
+          <br />
+          <a
+            href="index.html#contact-us"
+            class="d-inline-block mb-2 text-dark text-decoration-none"
+            >Kapcsolatba lépés velünk</a
+          >
+          <br />
+          <a
+            href="about.html"
+            class="d-inline-block mb-2 text-dark text-decoration-none"
+            >Rólunk</a
+          >
+          <br />
+        </div>
+        <div class="col-lg-4 p-4">
+          <h3 class="fw-bold footer-font">Kövessen minket</h3>
+          <a
+            href="https://www.instagram.com/dreamstayhotel_/"
+            target="_blank"
+            class="d-inline-block mb-3"
+          >
+            <span class="badge bg-light text-dark fs-6 p-2">
+              <i class="bi bi-instagram me-1"></i>Instagram
+            </span>
+          </a>
+          <br />
+          <a
+            href="https://www.facebook.com/profile.php?id=61568641694075"
+            target="_blank"
+            class="d-inline-block mb-3"
+          >
+            <span class="badge bg-light text-dark fs-6 p-2">
+              <i class="bi bi-facebook me-1"></i>Facebook
+            </span>
+          </a>
+          <br />
+          <a
+            href="https://www.tiktok.com/@dreamstay.hotel"
+            target="_blank"
+            class="d-inline-block"
+          >
+            <span class="badge bg-light text-dark fs-6 p-2">
+              <i class="bi bi-tiktok me-1"></i>TikTok
+            </span>
+          </a>
+        </div>
+      </div>
     </div>
 
-    <h6 class="text-center bg-dark text-white p-3 m-0">© A DreamStyle Hotel csapatának tervezése és fejlesztése áltál.</h6>
-
+    <h6 class="text-center bg-dark text-white p-3 m-0">
+      © A DreamStyle Hotel csapatának tervezése és fejlesztése áltál.
+    </h6>
 
     <!-- Bootstrap and Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./main.js"></script>
+    <script src="./loadRooms.js"></script>
     <script>
-        var swiper = new Swiper(".swiper-container", {
-            spaceBetween: 30,
-            effect: "fade",
-            loop: true,
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            }
-        });
+      var swiper = new Swiper(".swiper-container", {
+        spaceBetween: 30,
+        effect: "fade",
+        loop: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+      });
 
-        var swiper = new Swiper(".swiper-testimonials", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      slidesPerView: "3",
-      loop: true,
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      breakpoints: {
-        320: {
-            slidesPerView: 1,
+      var swiper = new Swiper(".swiper-testimonials", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        slidesPerView: "3",
+        loop: true,
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
         },
-        640: {
-            slidesPerView: 1,
+        pagination: {
+          el: ".swiper-pagination",
         },
-        768: {
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
             slidesPerView: 2,
-        },
-        1024: {
+          },
+          1024: {
             slidesPerView: 3,
+          },
         },
-      }
-    });
+      });
     </script>
-</body>
+  </body>
 </html>
